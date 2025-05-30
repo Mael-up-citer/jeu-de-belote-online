@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+  Copyright (c) 2015, 2019, Gluon and/or its affiliates.
+  All rights reserved. Use is subject to license terms.
+
+  This file is available and licensed under the following license:
+
+  Redistribution and use in source and binary forms, with or without
+  modification, are permitted provided that the following conditions
+  are met:
+
+  - Redistributions of source code must retain the above copyright
+    notice, this list of conditions and the following disclaimer.
+  - Redistributions in binary form must reproduce the above copyright
+    notice, this list of conditions and the following disclaimer in
+    the documentation and/or other materials provided with the distribution.
+  - Neither the name of Oracle Corporation nor the names of its
+    contributors may be used to endorse or promote products derived
+    from this software without specific prior written permission.
+
+  THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
+  "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
+  LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR
+  A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT
+  OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
+  SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT
+  LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,
+  DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY
+  THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
+  (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
+  OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+-->
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ProgressIndicator?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.FlowPane?>
+<?import javafx.scene.layout.Pane?>
+
+<AnchorPane fx:id="mainPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="1280.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GUI.Game.WindowsGameController">
+   <children>
+      <Label layoutX="86.0" layoutY="14.0" text="Eux" />
+      <Label layoutX="21.0" layoutY="14.0" text="Nous" />
+      <Label fx:id="labelScoreNous" layoutX="15.0" layoutY="47.0" text="0/1000" />
+      <Label fx:id="labelScoreEux" layoutX="76.0" layoutY="47.0" text="0/1000" />
+      <Pane fx:id="CardDump" layoutX="358.0" layoutY="207.0" prefHeight="198.0" prefWidth="443.0">
+         <children>
+            <ImageView fx:id="CardDumpImg2" fitHeight="200.0" fitWidth="175.0" layoutX="130.0" layoutY="-30.0" pickOnBounds="true" preserveRatio="true" />
+            <ImageView fx:id="CardDumpImg3" fitHeight="200.0" fitWidth="175.0" layoutX="256.0" pickOnBounds="true" preserveRatio="true" x="10.0" />
+            <ImageView fx:id="CardDumpImg1" fitHeight="200.0" fitWidth="175.0" pickOnBounds="true" preserveRatio="true" />
+            <ImageView fx:id="CardDumpImg4" fitHeight="200.0" fitWidth="175.0" layoutX="130.0" layoutY="30.0" pickOnBounds="true" preserveRatio="true" />
+         </children>
+      </Pane>
+      <FlowPane fx:id="AtoutPane" layoutX="489.0" layoutY="414.0" prefHeight="100.0" prefWidth="214.0" visible="false">
+         <children>
+            <Button fx:id="Coeur" alignment="CENTER" contentDisplay="GRAPHIC_ONLY" disable="true" mnemonicParsing="false">
+               <graphic>
+                  <ImageView fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../images/Couleurs/Coeur.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <FlowPane.margin>
+                  <Insets right="5.0" top="10.0" />
+               </FlowPane.margin>
+            </Button>
+            <Button fx:id="Trefle" alignment="CENTER" contentDisplay="GRAPHIC_ONLY" disable="true" mnemonicParsing="false">
+               <graphic>
+                  <ImageView fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../images/Couleurs/Trefle.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <FlowPane.margin>
+                  <Insets right="5.0" top="10.0" />
+               </FlowPane.margin>
+            </Button>
+            <Button fx:id="Carreau" alignment="CENTER" contentDisplay="GRAPHIC_ONLY" disable="true" mnemonicParsing="false">
+               <graphic>
+                  <ImageView fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../images/Couleurs/Carreau.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <FlowPane.margin>
+                  <Insets right="5.0" top="10.0" />
+               </FlowPane.margin>
+            </Button>
+            <Button fx:id="Pique" alignment="CENTER" contentDisplay="GRAPHIC_ONLY" disable="true" mnemonicParsing="false">
+               <graphic>
+                  <ImageView fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../images/Couleurs/Pique.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <FlowPane.margin>
+                  <Insets right="5.0" top="10.0" />
+               </FlowPane.margin></Button>
+            <BorderPane prefHeight="70.0" prefWidth="215.0">
+               <center>
+                  <Button fx:id="Passer" disable="true" mnemonicParsing="false" text="Passer" BorderPane.alignment="CENTER" />
+               </center>
+            </BorderPane>
+         </children>
+      </FlowPane>
+      <Label fx:id="moi" layoutX="255.0" layoutY="599.0" text="Moi" />
+      <Label fx:id="labelJoueurTop" layoutX="855.0" layoutY="78.0" text="Joueur" />
+      <Label fx:id="labelJoueurRight" layoutX="1133.0" layoutY="618.0" text="Joueur" />
+      <Label fx:id="labelJoueurLeft" layoutX="128.0" layoutY="167.0" text="Joueur" />
+      <Label fx:id="labelAtoutEnCour" layoutX="17.0" layoutY="83.0" text="Atout en cour :   " />
+      <Pane fx:id="dialogPane" layoutX="528.0" layoutY="75.0" prefHeight="200.0" prefWidth="200.0">
+         <children>
+            <Label fx:id="idGameLabel" alignment="CENTER" contentDisplay="CENTER" layoutX="24.0" layoutY="53.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="17.0" prefWidth="150.0" textAlignment="CENTER" wrapText="true" />
+            <Label fx:id="nbPlayer" layoutX="24.0" layoutY="91.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="17.0" prefWidth="150.0" textAlignment="CENTER" />
+            <ProgressIndicator fx:id="progressIndicator" layoutX="82.0" layoutY="139.0" progress="0.0" visible="false" />
+         </children>
+      </Pane>
+      <FlowPane fx:id="Mycadre" layoutX="364.0" layoutY="552.0" prefHeight="166.0" prefWidth="656.0" />
+      <FlowPane fx:id="frontCadre" layoutX="423.0" layoutY="4.0" prefHeight="166.0" prefWidth="363.0" />
+      <FlowPane fx:id="leftCadre" layoutX="-81.0" layoutY="282.0" prefHeight="198.0" prefWidth="363.0" rotate="90.0" />
+      <FlowPane fx:id="rightCadre" layoutX="974.0" layoutY="262.0" prefHeight="196.0" prefWidth="395.0" rotate="90.0" />
+      <Button fx:id="BeloteButton" disable="true" layoutX="238.0" layoutY="516.0" mnemonicParsing="false" text="Belote" />
+      <Label fx:id="joueurAPris" layoutX="14.0" layoutY="124.0" />
+   </children>
+</AnchorPane>

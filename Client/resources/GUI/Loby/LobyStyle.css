@@ -1,0 +1,27 @@
+/* Style général pour les boutons */
+.button {
+    -fx-background-color: #23863a; /* Vert classique */
+    -fx-text-fill: white; /* Texte en blanc */
+    -fx-font-size: 14px; /* Taille de la police */
+    -fx-padding: 10px 15px; /* Espacement interne */
+    -fx-border-radius: 5px; /* Bords arrondis */
+    -fx-background-radius: 5px; /* Fonds arrondis */
+    -fx-border-color: transparent; /* Pas de bordure visible */
+    -fx-border-width: 0; /* Aucune bordure */
+}
+
+/* Effet au survol du bouton */
+.button:hover {
+    -fx-background-color: #3ea755; /* Couleur légèrement plus foncée au survol */
+}
+
+/* Effet lorsque le bouton est pressé */
+.button:pressed {
+    -fx-background-color: #227736; /* Couleur encore plus foncée quand on clique */
+}
+
+#errorLabel {
+    -fx-text-fill: red; /* Couleur du texte d'erreur */
+    -fx-font-size: 14px; /* Taille du texte */
+    -fx-padding: 5px; /* Espacement autour du texte */
+}
